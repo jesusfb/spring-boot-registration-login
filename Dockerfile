@@ -5,6 +5,6 @@ RUN mvn clean package -Dmaven.test.skip=true
 
 FROM amazoncorretto:17-alpine
 MAINTAINER LeninQuintero
-COPY --from=builder /app/target/employee_app-0.0.1-SNAPSHOT.jar /usr/local/lib/employee_app.jar
+COPY --from=builder /app/target/SpringBootRegistrationLogin-1.0.jar /usr/local/lib/SpringBootRegistrationLogin.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "/usr/local/lib/employee_app.jar"]
+ENTRYPOINT ["java", "-jar", "/usr/local/lib/SpringBootRegistrationLogin.jar"]
